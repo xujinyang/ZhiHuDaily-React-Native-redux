@@ -1,0 +1,16 @@
+{
+	"name": "ReactNews",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		 "start": "node_modules/react-native/packager/packager.sh",
+    "setup": "cd node_modules; find . -name .babelrc | grep -v packager | xargs rm"
+	},
+	"dependencies": {
+		"react-native": "^0.18.1",
+		"immutable":"^3.7.5",
+		"react-redux": "^4.0.6",
+		"redux": "^3.0.5",
+		"redux-thunk": "^1.0.3"
+	}
+}
