@@ -14,6 +14,7 @@ const {
 
 import Animated from 'Animated';
 import News from '../containers/news'
+import MainView from './MainView'
 
 var WINDOW_WIDTH = Dimensions.get('window').width;
 
@@ -48,8 +49,8 @@ class SplashView extends React.Component {
 		const {navigator} = this.props;
 		InteractionManager.runAfterInteractions(() => {
 			navigator.push({
-				component: News,
-				name: 'News'
+				component: MainView,
+				name: 'MainView'
 			})
 		})
 	}
