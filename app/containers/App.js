@@ -14,6 +14,8 @@ const {
   PropTypes
 } = React
 
+var _navigator;
+
 class ZhihuNavi extends React.Component{
 	constructor(props){
 		super(props);
@@ -25,6 +27,7 @@ class ZhihuNavi extends React.Component{
 
 renderScene(route,navigator){
 	let Component=route.component;
+    _navigator = navigator;
 	return(
 		<Component navigator={navigator} route={route}/>
 		);

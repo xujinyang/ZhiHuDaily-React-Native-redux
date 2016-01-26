@@ -3,12 +3,12 @@
 import React from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import News from './news';
+import SplashView from '../view/SplashView';
 
 class SplashContainer extends React.Component{
 	render() {
 		return (
-			<News {...this.props} />
+			<SplashView {...this.props} />
 		)
 	}
 }

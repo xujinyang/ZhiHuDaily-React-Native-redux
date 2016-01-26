@@ -15,24 +15,13 @@ import React, {
 	View
 }
 from 'react-native';
-import {addCount} from '../actions/news'
-
-
-const propTypes = {
-	dispatch: PropTypes.func.isRequired,
-	news: PropTypes.object.isRequired
-}
 
 class ReactNews extends React.Component {
 	constructor(props) {
 		super(props);
-	this.onPress=this.onPress.bind(this);
+	
 	}
 
-	onPress(){
-		const {dispatch}=this.props;
-		dispatch(addCount());
-	}
 
 	render() {
 		const {
@@ -41,9 +30,9 @@ class ReactNews extends React.Component {
 		} = this.props;
 		return (
 			
-        <TouchableHighlight onPress={this.onPress.bind(this)} underlayColor='transparent'>
+        <TouchableHighlight  underlayColor='transparent'>
         <Text style={styles.instructions}>
-          {news.count+'数目'}
+         测试
         </Text>
          </TouchableHighlight>
      
@@ -70,5 +59,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-ReactNews.propTypes = propTypes;
 export default ReactNews;
