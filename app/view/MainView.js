@@ -28,18 +28,17 @@ class MainView extends React.Component {
 		this.state = {
 			dataSource: new ListView.DataSource({
 				rowHasChanged: (row1, row2) => row1 !== row2,
+				isLoading:false
 			})
 		};
 
 		this.onRefresh = this.onRefresh.bind(this);
 		this.renderItem = this.renderItem.bind(this);
-
 	}
 
 
 	componentDidMount() {
 			this.onRefresh();
-		
 	}
 
 	onRefresh() {
@@ -58,7 +57,8 @@ class MainView extends React.Component {
         	
 				console.log(responseData.retData);
         	this.setState({
-        		dataSource: this.state.dataSource.cloneWithRows(responseData.retData)
+        		dataSource: this.state.dataSource.cloneWithRows(responseData.retData),
+        		isLoading:false
         	})
         })
         .catch((error) =>{
@@ -100,7 +100,7 @@ class MainView extends React.Component {
 				style={styles.listView}
 				refreshControl={
 					<RefreshControl
-						refreshing={false}
+						refreshing={this.isLoading}
 						onRefresh={this.onRefresh}
 						title="Loading..."
 						colors={['#ffaa66cc', '#ff00ddff', '#ffffbb33', '#ffff4444']}

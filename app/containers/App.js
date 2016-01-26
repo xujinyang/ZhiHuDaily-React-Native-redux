@@ -16,7 +16,7 @@ const {
 
 var _navigator;
 
-class ZhihuNavi extends React.Component{
+class ReactNews extends React.Component{
 	constructor(props){
 		super(props);
 		BackAndroid.addEventListener('hardwareBackPress',function(){
@@ -61,4 +61,4 @@ let styles = StyleSheet.create({
 })
 
 
-export default ZhihuNavi;
+export default ReactNews;

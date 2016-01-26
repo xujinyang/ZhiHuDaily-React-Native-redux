@@ -71,7 +71,6 @@ class SplashView extends React.Component {
 		        <Text style={styles.text}>
 		            React新闻
 		        </Text>
-	       		<Image style={styles.logo} source={require('../img/splash_logo.png')} />
 	       		</View>
 		);
 	}
